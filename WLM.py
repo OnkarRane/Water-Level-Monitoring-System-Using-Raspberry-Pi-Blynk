@@ -75,15 +75,13 @@ while(1):
                 blynk.virtual_write(5,water_level)
                 if water_level>90:
                         print('Overflow!!!!')
+			a.output(26,a.LOW)
+			a.output(7,a.HIGH)
                         time.sleep(5)
-                        a.output(7,a.LOW)
-        else:
-                a.output(2,a.LOW)
-                a.output(21,a.LOW)
-                a.output(16,a.LOW)
-                a.output(7,a.LOW)
- 
-    time.sleep(5)
+			a.output(7,a.LOW)
+                        
+ 
+    	time.sleep(5)
      
 a.cleanup()
 
